@@ -1,34 +1,42 @@
 *{
   margin: 0;
+  padding: 0;
 }
 
  html body {
-  background-color: rgb(221, 149, 197);
+  background-color: rgb(217, 205, 213);
 
 }
 
 #drum-machine{
    display: flex; 
   flex-direction: column;
-  width: 60%; 
+  width: 40%; 
+  min-width: 30%;
+  min-height: 50%;
   /* height: 100vh; */
   justify-content: center;
   justify-items: center;
   align-items: center;
-   background-color: rgb(129, 142, 154);
-  border:  3px solid rgb(184, 97, 97);
+   background-color: rgb(135, 160, 182);
+  border:  3px solid rgb(205, 127, 127);
   border-radius: 20px;
-   margin: 200px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+   margin-left:30%;
+   margin-right: 30%;
+   /* padding-top: 2%; */
+   padding-bottom: 2%;
   /* padding: 200px 200px;   */
   /* box-shadow: 1px 0px 10px 10px rgb(40, 46, 45); */
 }
 
-#display{
+#dis{
   display: grid;
   grid-template-columns: repeat(3,40px [col-start]);
-  padding-top: 10px;
-  padding-bottom: 30px;
- 
+  padding-top: 5%;
+  /* padding-bottom: 10%; */
+
   /* width: 450px; */
    gap:30px; 
   justify-content: center;
@@ -36,8 +44,10 @@
 }
 
 .drum-pad{
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  
+  height: 50px;
+ 
   border: 0.5px solid black;
    box-shadow: 2px 2px 2px 0px rgb(20, 24, 24);  
 
@@ -50,6 +60,7 @@
   display: inline-block;
   width: 60px;
   height: 34px;
+ 
 }
 
 /* Hide default HTML checkbox */
@@ -57,6 +68,7 @@
   opacity: 0;
   width: 0;
   height: 0;
+
 }
 
 /* The slider */
@@ -67,7 +79,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  border-radius: 45%;
+ 
+  background-color: #bcabc6;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -82,18 +96,36 @@
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
+  border-radius: 50% ;
+  
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #ccc;
+  /* background-color: #c8a2dc; */
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #a2b5c6;
 }
 
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+}
+
+
+.power-bank{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+ 
+}
+.bank {
+  margin:5%
+}
+.power{
+  margin: 5%;
 }
